@@ -16,7 +16,6 @@ class FindLink(unittest.TestCase):
     def test_link(self):
         self.driver.get("https://www.navcanada.ca/en/")
         web_dev_link = self.driver.find_elements(By.PARTIAL_LINK_TEXT, 'The Future')
-        # Test atleast we have one link with name  "Web Development"
         self.assertIsNotNone(web_dev_link)
 
     def tearDown(self):
